@@ -1,0 +1,141 @@
+/*--altalanos--*/
+	body{
+		font-size: 16px;
+		font-family: 'Roboto' , sans-serif;
+		font-weight: 300;
+	}
+
+	*, *::before, *::after{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	img{
+		max-width: 100%;
+	}
+/*--altalanos_end--*/
+
+/*--felosztas--*/
+	body{
+		display: grid;
+		grid-template-areas:
+			"cimsor"
+			"navigacio"
+			"tartalom"
+			;
+		grid-template-rows: max-content max-content 1fr;
+		min-height: 100vh;
+	}
+	header{
+		background-color: #adacb0;
+		grid-area: cimsor;
+	}
+	main{
+		background-color: #8f8e91;
+		grid-area: navigacio;
+		min-height: 3.5rem;
+	}
+	footer{
+		background-color: #5c5c5e;
+		grid-area: tartalom;
+	}
+/*--felosztas_end--*/
+
+/*--cimsor--*/
+	.cim{
+		line-height: 2rem;
+		font-size: 1.5rem;
+		text-align: right;
+		text-shadow: 2px 1px 2px #ffffff;
+		padding: .75rem 1rem;
+		text-decoration: overline underline;
+		font-weight: bold;
+		;
+	}
+	.alcim{
+		font-size: 2rem;
+		text-align: left;
+		padding: 2rem 0rem 2rem 3rem;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+/*--cimsor_end--*/
+
+/*--navigacio--*/
+	.gomb{
+		color: #fffcfc;
+		text-decoration: none;
+		border: 2px solid black;
+		background-color: #302f2f;
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		margin: .75rem;
+		border-radius: 2rem;
+		transition: .3s;
+		min-width: max-content;
+		user-select: none;
+	}
+	.gomb_jobbra{
+		float: right;
+	}
+	.flex_nyulik{
+		flex-grow:  1;
+		text-align: right;
+	}
+	.gomb:hover{
+		cursor: pointer;
+		background-color: #000000;
+
+		-webkit-box-shadow: 0px 0px 11px 5px #f7f2f2;
+			-moz-box-shadow: 0px 0px 11px 5px #f7f2f2;
+			box-shadow: 0px 0px 11px 5px #f7f2f2; 
+	}
+/*--navigacio_end--*/
+
+/*--tartalom--*/
+	.kep{
+		max-width: 30rem;
+		margin: 1rem 1rem;
+		padding: 1rem;
+		border-radius: 10px;
+		max-width: 600px;
+		grid-area: kep;
+	}
+	.leiras{
+		margin: 2rem 1rem;
+		max-width: 40rem;
+		line-height: 150%;
+		font-size: 1.2rem;
+		grid-area: leiras;		
+	}
+	.doboz{
+		margin: 1rem 1rem;
+		padding: 1rem;
+		border-radius: 10px;
+		background-color:#ebebeb;
+		-webkit-box-shadow: 7px 11px 20px -13px #000000;
+			-moz-box-shadow: 7px 11px 20px -13px #000000;
+			box-shadow: 7px 11px 20px -13px #000000;
+	}
+	.racs{
+
+		display: grid;
+		grid-template-columns:1fr;
+		grid-template-areas: 
+			"kep"
+			"leiras"
+			;
+	}
+
+	@media only screen and (min-width: 800px){
+		.racs{
+			display: grid;
+			grid-template-columns:1fr 1fr 10rem;
+			grid-template-areas: 
+			"leiras kep"
+			"leiras kep"
+			;
+		}
+	}
+/*--tartalom_end--*/

@@ -1,0 +1,171 @@
+/*--altalanos--*/
+	body{
+		font-size: 16px;
+		font-family: 'Roboto' , sans-serif;
+		font-weight: 300;
+	}
+
+	*, *::before, *::after{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	img{
+		max-width: 100%;
+	}
+/*--altalanos_end--*/
+
+/*--felosztas--*/
+	body{
+		display: grid;
+		grid-template-areas:
+			"cimsor"
+			"navigacio"
+			"tartalom"
+			;
+		grid-template-rows: max-content max-content 1fr;
+		min-height: 100vh;
+	}
+	header{
+		background-color: #24b2ff;
+		grid-area: cimsor;
+	}
+	main{
+		background-color: #1d69ab;
+		grid-area: navigacio;
+		min-height: 3.5rem;
+	}
+	footer{
+		background-color: #1d45ab;
+		grid-area: tartalom;
+	}
+/*--felosztas_end--*/
+
+/*--cimsor--*/
+	.cim{
+		line-height: 2rem;
+		font-size: 1.5rem;
+		text-align: right;
+		text-shadow: 2px 1px 2px #4216CE;
+		padding: .75rem 1rem;
+		text-decoration: overline underline;
+		font-weight: bold;
+		;
+	}
+	.alcim{
+		font-size: 2rem;
+		text-align: left;
+		padding: 2rem 0rem 2rem 3rem;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+/*--cimsor_end--*/
+
+/*--navigacio--*/
+	.gomb{
+		font-weight: bold;
+		color: black;
+		text-decoration: none;
+		border: 2px solid black;
+		background-color: #4d4dff;
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		margin: .75rem; 
+		border-radius: 2rem;
+		transition: .3s;
+		min-width: max-content;
+		user-select: none;
+	}
+	.gomb_jobbra{
+		float: right;
+	}
+	.flex_nyulik{
+		flex-grow:  1;
+		text-align: right;
+	}
+	.gomb:hover{
+		cursor: pointer;
+		background-color: #2121ed;
+
+		-webkit-box-shadow: 0px 0px 11px 5px rgba(9,245,255,0.8);
+			-moz-box-shadow: 0px 0px 11px 5px rgba(9,245,255,0.8);
+			box-shadow: 0px 0px 11px 5px rgba(9,245,255,0.8); 
+	}
+/*--navigacio_end--*/
+
+/*--tartalom--*/
+	.nagykep{
+	  margin: auto;
+	  display: block;
+	  width: 80%;
+	  max-width: 700px;
+	}
+	@keyframes zoom {
+	  from {transform:scale(0)}
+	  to {transform:scale(1)}
+	}
+	.bezar:hover,
+	.bezar:focus {
+	  color: #bbb;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+	.kartya_pozicionalt{
+		position: relative;
+		overflow: hidden;
+		padding: 0;
+		margin: .5rem 0;
+	}
+	.kartya_pozicionalt img{
+		margin: 0;
+		max-height: 10rem;
+	}
+	.kartya_pozicionalt span{
+		position: absolute;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		padding: .2rem .2rem .2rem .5rem;
+		text-align: center;
+		background-color: rgba(255,255,255,.7);
+		transition: .3s;
+	}
+	.kartya_pozicionalt:hover span{
+		top: 0;
+	}
+	.gomb_masik{
+		border: 2px solid black;
+		background-color: #2baed6;
+		display: inline-block;
+		margin: .5 1rem;
+		border-radius: 2rem;
+		transition: .3s;
+		min-width: max-content;
+	}
+	.gomb_masik:hover{
+		cursor: pointer;
+		-webkit-box-shadow: 0px 0px 11px 5px rgba(9,245,255,0.8);
+			-moz-box-shadow: 0px 0px 11px 5px rgba(9,245,255,0.8);
+			box-shadow: 0px 0px 11px 5px rgba(9,245,255,0.8);
+	}
+	.javitas::after{
+		content: "";
+		clear: both;
+		display: table;
+	}
+	.valami1{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.valami_egyenletesen{
+		justify-content: space-around;
+	}
+
+	@media only screen and (min-width: 530px){
+		.kartya_pozicionalt img{
+		margin: 0;
+		max-height: 20rem;
+		}
+	}
+/*--tartalom_end--*/

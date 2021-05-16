@@ -1,0 +1,185 @@
+/*--altalanos--*/
+	body{
+		font-size: 16px;
+		font-family: 'Roboto' , sans-serif;
+		font-weight: 300;
+	}
+
+	*, *::before, *::after{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	img{
+		max-width: 100%;
+	}
+/*--altalanos_end--*/
+
+/*--felosztas--*/
+	body{
+		display: grid;
+		grid-template-areas:
+			"cimsor"
+			"navigacio"
+			"tartalom"
+			;
+		grid-template-rows: max-content max-content 1fr;
+		min-height: 100vh;
+	}
+	header{
+		background-color: #fff12b;
+		grid-area: cimsor;
+	}
+	main{
+		background-color: #e6cf25;
+		grid-area: navigacio;
+		min-height: 3.5rem;
+	}
+	footer{
+		background-color: #baa51e;
+		grid-area: tartalom;
+	}
+/*--felosztas_end--*/
+
+/*--cimsor--*/
+	.cim{
+		line-height: 2rem;
+		font-size: 1.5rem;
+		text-align: right;
+		text-shadow: 2px 1px 2px #eb6702;
+		padding: .75rem 1rem;
+		text-decoration: overline underline;
+		font-weight: bold;
+		;
+	}
+	.alcim{
+		font-size: 2rem;
+		text-align: left;
+		padding: 2rem 0rem 2rem 3rem;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+/*--cimsor_end--*/
+
+/*--navigacio--*/
+	.gomb{
+		font-weight: bold;
+		color: black;
+		text-decoration: none;
+		border: 2px solid black;
+		background-color: #f58d3d;
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		margin: .75rem;
+		border-radius: 2rem;
+		transition: .3s;
+		min-width: max-content;
+		user-select: none;
+	}
+	.gomb_jobbra{
+		float: right;
+	}
+	.flex_nyulik{
+		flex-grow:  1;
+		text-align: right;
+	}
+	.gomb:hover{
+		cursor: pointer;
+		background-color: #e0690d;
+
+		-webkit-box-shadow: 0px 0px 11px 5px #ffa90a;
+			-moz-box-shadow: 0px 0px 11px 5px #ffa90a;
+			box-shadow: 0px 0px 11px 5px #ffa90a; 
+	}
+/*--navigacio_end--*/
+
+/*--tartalom--*/
+	.szöveg{
+		font-size: 1.2rem;
+		background-color: yellow;
+	}
+	.kep{
+		max-width: 5rem;
+		margin: 1rem 1rem;
+		padding: 1rem;
+		border-radius: 10px;
+	}
+	.doboz{
+		margin: 1rem 1rem;
+		padding: 1rem;
+		border-radius: 10px;
+		background-color:#f0f022;
+		-webkit-box-shadow: 7px 11px 20px -13px #000000;
+			-moz-box-shadow: 7px 11px 20px -13px #000000;
+			box-shadow: 7px 11px 20px -13px #000000;
+		max-width: 40rem;
+	}
+	.dobozmasik{
+		margin: 1rem 1rem;
+		padding: 1rem;
+		border-radius: 10px;
+		background-color:#f0ca22;
+		-webkit-box-shadow: 7px 11px 20px -13px #000000;
+			-moz-box-shadow: 7px 11px 20px -13px #000000;
+			box-shadow: 7px 11px 20px -13px #000000;
+		max-width: 30rem;
+	}
+	.egy{
+		grid-area: egy;
+	}
+	.ketto{
+		grid-area: ketto;
+	}
+	.harom{
+		grid-area: harom;
+	}
+	.negy{
+		grid-area: negy;
+	}
+	.bal{
+		grid-area: bal;
+	}
+	.jobb{
+		margin-top: 2.5rem;
+		margin-bottom: .5rem;
+		margin-left: 1rem;
+		grid-area: jobb;
+	}
+	.racs{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"egy"
+			"ketto"
+			"harom"
+			"negy"
+			;
+	}
+	.racsmasik{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+			"bal" 
+			"jobb"
+			;
+	}
+	
+	@media only screen and (min-width: 800px){
+		.racs{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 
+			"egy ketto"
+			"harom negy"
+			;
+		}
+		.racsmasik{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+			"bal jobb"
+			;
+		}
+	}
+/*--tartalom_end--*/
